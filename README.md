@@ -1,9 +1,15 @@
 # "META"-meteor-app
 
-The key defining feature of this 
-Enables users to create and manage collections and objects via client side forms, and pull data to be inserted into the data structures that have been defined from external JSON APIs that are continuously monitored.  
+## Overview
+The key defining features of this app are
+- **(1)** It abstracts the process of configuring collection schemas out of the server code and into the frontend, essentially allowing the user to use a client side form to create new collections in the db.
 
-This app has the following main characteristics: 
+- **(2)** It enables the user to configure external API monitoring processes also using client side forms.
+
+Essentially This app enables the user to define and manage collections and objects via client side forms. It is also able to pull data from external APIs to be inserted into the data structures that have been defined.
+
+## Features
+This app has the following main features: 
 
 - It enables users to create and manage **```db.collection```(s)** and **```db.collection.object```(s)** via client side forms.
 
