@@ -186,7 +186,8 @@ example
 https://api.instagram.com/v1/users/self/media/recent/?access_token=143984903.92d306a.eab7eb55cbe04325a00ce010af041f4a
 
 (for the exmaple json data, to get a valid access token, you need an instagram acocunt, and then follow these steps)
-- https://api.instagram.com/oauth/authorize/?client_id=92d306a2ca44464098e8ae3c0a128ee6&redirect_uri=http://localhost&response_type=token
+- go to https://api.instagram.com/oauth/authorize/?client_id=92d306a2ca44464098e8ae3c0a128ee6&redirect_uri=http://localhost&response_type=token
+- when you get the response, copy the token in the url and replace the token in the first link above
 
 It will check the json data and if there is new json data since the last time it checked, it will pull the new data into our db. 
 
