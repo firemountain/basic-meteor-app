@@ -1,7 +1,9 @@
 # "META"-meteor-app
 
 A mockup of the app has been created in HTML to serve as a guide and template to work form 
-- **LINK TO GUIDE**
+
+**LINK TO GUIDE**
+
 https://firemountain.github.io
 
 you can get code here
