@@ -23,7 +23,7 @@ When user hits “Create”:
         - Links
 - The field that is selected as the “tagsArray”, will save data to special collection property , that all collections will have, called “tagsArray” , which is an object array, with each object having a “Name” property. 
 
-## Config file 
+## Config file
 Contains setup data for app including:
 - Admin Username / password
 - A list of the collections which will show in the navbar
