@@ -125,9 +125,6 @@ The  HTML would end up looking like this
 <div class="col l4 m6 s12 gallery-item gallery-expand gallery-filter tag1">
   <div class="placeholder">
           <div class="gallery-curve-wrapper">
-              <a class="gallery-cover gray">
-                <div class="responsive-img" alt="placeholder"></div>
-              </a>
               
               <div class="gallery-header">
                 <span>a3287f033f98dc241e110000</span>
