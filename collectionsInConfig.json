@@ -1,0 +1,21 @@
+featuredCollections {
+  Collection0 : [
+                  tag1
+                  tag2
+                  tag3
+                ]
+  ,Collection1 : [
+                  tag1
+                  tag2
+                ]
+  ,Collection2 : [
+                  tag1
+                  tag2
+                  tag3
+                  tag4
+                  tag5
+                  tag6
+                ]
+  ,Collection3 : [
+                ]
+}
