@@ -48,14 +48,14 @@ On this view an Admin user can create a new ```db.scraper.{object}```
 - The url of a JSON API to monitor
 - The name of the new scraper
 - The name of the new collection where the data pulled from the api will be stored 
-- The fields (keys,properties etc.) in the JSON API to save to our db in the new collection. This is a textfield input where each field(key,property etc.) is entered on a new line 
+- The "targeted data fields" (keys,properties etc.) in the JSON API to save to our db in the new collection. This is a textfield input where each field(key,property etc.) is entered on a new line 
 - Which of these fields will be parsed as markdown
 - Which of these fields is a “tagsArray”
  
 **When user hits “Create”:**
-- a the new scraper object is created
+- a new scraper object is created
 - a new collection, where scraped data will be stored, will be created
-- A process will be launched, that will pull the targeted data fields in the JSON API into our db in the new collection, this process will run as a chron job at the hour interval defined by the user
+- A process will be launched, that will pull the "targeted data fields", in the JSON API into our db in the new collection, this process will run as a chron job at the hour interval defined by the user
 - The fields (can be more than one) which have been selected to be parsed as markdown, will be parsed as markdown and we will save additional fields to the object, these will be arrays that will contain string values of each parsed markdown type
   - Example:
     - The the field marked to be parsed as markdown contains a string value, so we take that string and parse it as markdown, for each formatting type in the markdown we create a new array and save the formatted elements there. So if the string being parsed has 4 h1 headers then a name-of-field.h1: [ ]  array will contain all the values of the H1’s
@@ -175,3 +175,16 @@ Here logged in users can create objects in the currently active collection view.
 
 As we have not yet defined any shcemas in this project, at this point we just want to create a test "Create Object" that will create objects in the current collection that have the properties shown here https://firemountain.github.io/create-object.html
 
+## API Monitoring 
+
+Each new **```scraper```**  will be a process that runs as a chron job.  
+
+It will use a api url where the data can be found.
+
+It will check the json data and if there is new json data since the last time it checked, it will pull the new data into our db. 
+
+The data to be pulled is defined on the **```scraper```** object that user entered when they created a new scraper object.
+
+The data fields that were marked to be "parsed as markdown" will parse the data on the selected property and save additional data to the db, (see the "Create new data Scraper view"  section for details)
+
+The data fields that were marked to be tagsArray will be duplicated and saved on the "tagsArray" property on the new object created in the db, (see the "Create new data Scraper view"  section for details)
