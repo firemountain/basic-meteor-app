@@ -30,7 +30,7 @@ Contains setup data for app including:
   - Each collection will be given a list “tags” that will show up in <ul class="categories container">  ONLY if they are contained in the tagArray for that collection.
   - Example of config 
   - https://github.com/firemountain/basic-meteor-app/blob/master/collectionsInConfig.json
-.
+a
 
 
 ## UI for app
