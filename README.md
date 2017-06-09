@@ -101,7 +101,8 @@ On this view an Admin user can create a new ```db.scraper.{object}```
      
     - So for example, if the collection looked like this
 
-```{
+```
+{
  
  
 "DisplayName" : "Some User",
@@ -120,11 +121,13 @@ On this view an Admin user can create a new ```db.scraper.{object}```
 “tags” : [“apple”,”banana”,”pokemon”,12]
  
  
-}```
+}
+```
  
 The  HTML would end up looking like this
 
-```<div class="col l4 m6 s12 gallery-item gallery-expand gallery-filter tag1">
+```
+<div class="col l4 m6 s12 gallery-item gallery-expand gallery-filter tag1">
   <div class="placeholder">
           <div class="gallery-curve-wrapper">
               
@@ -160,7 +163,8 @@ The  HTML would end up looking like this
               </div>
           </div>
     </div>
-</div> ```
+</div> 
+```
 
 https://github.com/firemountain/basic-meteor-app/blob/master/sample-gallery-item.html
  
