@@ -181,6 +181,12 @@ Each new **```scraper```**  will be a process that runs as a chron job.
 
 It will use a api url where the data can be found.
 
+example 
+
+https://api.instagram.com/v1/users/self/media/recent/?access_token=143984903.92d306a.eab7eb55cbe04325a00ce010af041f4a
+
+to get a valid access token follow these steps 
+
 It will check the json data and if there is new json data since the last time it checked, it will pull the new data into our db. 
 
 The data to be pulled is defined on the **```scraper```** object that user entered when they created a new scraper object.
