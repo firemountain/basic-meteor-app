@@ -30,7 +30,7 @@ Contains setup data for app including:
   - Each collection will be given a list “tags” that will show up in <ul class="categories container">  ONLY if they are contained in the tagArray for that collection.
   - Example of config 
   - https://github.com/firemountain/basic-meteor-app/blob/master/collectionsInConfig.json
- 
+
 ## UI for app
  
 This is the structure of the html / css / js for the UI. I have created the html layout to serve as a guide for how the final outcome of the app should be. You can see the navbar and tags that are shown in the config example above.
@@ -55,19 +55,20 @@ https://firemountain.github.io/
 - #### ul class="categories container"
   - In the  <ul class="categories container"> we will show the tagArray.name values on the collection that have been defined in the config file.
  
-- ####  <div class=”gallery”>
-  - In the <div class=”gallery”> all the data fields of each object in the collection will be  displayed within each <div class=”gallery-item”> 
+- ####  div class=”gallery”
+  - In the div class=”gallery” all the data fields of each object in the collection will be  displayed within each div class=”gallery-item” 
  
-  - ##### <div class=”gallery-header”><span> AND <div class=”title-wrapper”><h3>
+  - ##### div class=”gallery-header” span AND div class=”title-wrapper h3
     - Will show the the object _id will be displayed in the 
  
-  - ##### <div class=”gallery-body>,
+  - ##### div class=”gallery-body
  
  
-    - All the properties(fields) on each object, that are strings or integers will be listed, each as it’s own <div> within the <div class=”gallery-body>,
-      - note*
-        - arrays will have <ul> lists for the items
+    - All the properties(fields) on each object, that are strings or integers will be listed, each as it’s own div within the div class=”gallery-body
+      - **note**
+        - arrays will have ul lists for the items
         - Values of properties within a property that contain an object will be saved as well
+     
     - So for example, if the collection looked like this
 
 ```{
@@ -134,6 +135,7 @@ The  HTML would end up looking like this
           </div>
     </div>
 </div>
+
 ```
 https://github.com/firemountain/basic-meteor-app/blob/master/sample-gallery-item.html
  
