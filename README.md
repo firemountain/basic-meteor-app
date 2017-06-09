@@ -67,7 +67,7 @@ On this view an Admin user can create a new ```db.scraper.{object}```
  
  
 ### Navbar
-   The nav bar features top links for the collections we set in the config file. 
+   The nav bar features top links for the collections we set in the config file. The first collection in the list is the "default collection"
  
    It also features a drop down menu
    - For non-logged in users, the dropdown contains Login | Signup | About
