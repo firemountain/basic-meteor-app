@@ -122,7 +122,7 @@ On this view an Admin user can create a new ```db.scraper.{object}```
 The  HTML would end up looking like this
 
 ```
-<div class="col l4 m6 s12 gallery-item gallery-expand gallery-filter tag1" style="position: absolute; left: 0px; top: 0px;">
+<div class="col l4 m6 s12 gallery-item gallery-expand gallery-filter tag1">
   <div class="placeholder">
           <div class="gallery-curve-wrapper">
               <a class="gallery-cover gray">
