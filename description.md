@@ -54,10 +54,10 @@ https://firemountain.github.io/
   - In the ```<div class="nav-header center">``` The Collection Name is shown , and a button to launch a Create Object modal view (discussed below)
  
 - #### ul class="categories container"
-  - In the  <ul class="categories container"> we will show the tagArray.name values on the collection that have been defined in the config file.
+  - In the  ```<ul class="categories container">``` we will show the tagArray.name values on the collection that have been defined in the config file.
  
 - ####  div class=”gallery”
-  - In the div class=”gallery” all the data fields of each object in the collection will be  displayed within each div class=”gallery-item” 
+  - In the ```<div class=”gallery”>``` all the data fields of each object in the collection will be  displayed within each ```<div class=”gallery-item”>``` 
  
   - ##### div class=”gallery-header” span AND div class=”title-wrapper h3
     - Will show the the object _id will be displayed in the 
