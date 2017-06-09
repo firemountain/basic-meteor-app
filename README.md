@@ -166,5 +166,10 @@ The  HTML would end up looking like this
 ```
 https://github.com/firemountain/basic-meteor-app/blob/master/sample-gallery-item.html
  
+### Create Object View
+https://firemountain.github.io/create-object.html
 
+Here logged in users can create objects in the currently active collection view. 
+
+As we have not yet defined any shcemas in this project, at this point we just want to create a test "Create Object" that will create objects in the current collection that have the properties shown here https://firemountain.github.io/create-object.html
 
