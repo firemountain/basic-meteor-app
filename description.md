@@ -27,10 +27,9 @@ When user hits “Create”:
 Contains setup data for app including:
 - Admin Username / password
 - A list of the collections which will show in the navbar
-  - Each collection will be given a list “tags” that will show up in <ul class="categories container">  ONLY if they are contained in the tagArray for that collection.
+  - Each collection will be given a list “tags” that will show up in ul class="categories container"  ONLY if they are contained in the tagArray for that collection.
   - Example of config 
   - https://github.com/firemountain/basic-meteor-app/blob/master/collectionsInConfig.json
-a
 
 
 ## UI for app
