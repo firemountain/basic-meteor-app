@@ -4,6 +4,10 @@ A mockup of the app has been created in HTML to serve as a guide and template to
 **LINK TO GUIDE**
 https://firemountain.github.io
 
+you can get code here
+
+https://github.com/firemountain/firemountain.github.io
+
 
 ## Overview
 The key defining features of this app are
