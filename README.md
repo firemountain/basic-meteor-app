@@ -126,7 +126,7 @@ The  HTML would end up looking like this
   <div class="placeholder">
           <div class="gallery-curve-wrapper">
               <a class="gallery-cover gray">
-                <img class="responsive-img" src="http://placehold.it/350x250" alt="placeholder">
+                <img class="responsive-img" src="" alt="placeholder">
               </a>
               
               <div class="gallery-header">
