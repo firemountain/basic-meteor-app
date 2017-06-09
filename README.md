@@ -19,6 +19,7 @@ The key defining features of this app are
 - **(3)** Selected string data can be parsed as markdown and markdown elements saved as new data properties
 - **(4)** Multiple user types
 - **(5)** config file determines what data shows in certain parts of the UI
+- **(6)** use meteor's useraccounts package for login and permissions 
 
 ## Config file
 Contains setup data for app including:
