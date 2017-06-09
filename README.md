@@ -81,13 +81,14 @@ On this view an Admin user can create a new ```db.scraper.{object}```
   - In the  ```<ul class="categories container">``` we will show the tagArray.name values on the collection that have been defined in the config file.
 
 ### Gallery Items
-- ####  gallery ```<div class=”gallery”> <div class="gallery-item">``` 
-  - In the ```<div class=”gallery”>``` all the data fields of each object in the collection will be  displayed within each **```<div class=”gallery-item”>```**
+- In the ```<div class=”gallery”>``` all the data fields of each object in the collection will be  displayed within each **```<div class=”gallery-item”>```**
  
-  - #### gallery-header and title ```<div class=”gallery-header”> <span>``` AND ```<div class=”title-wrapper> <h3>```
+#### Gallery-Header and Title 
+- ```<div class=”gallery-header”> <span>``` AND ```<div class=”title-wrapper> <h3>```
     - Will show the the object _id will be displayed in the 
  
-  - #### elements within gallery body ```<div class=”gallery-body>```
+#### Elements within gallery body
+- ```<div class=”gallery-body>```
  
  
     - All the properties(fields) on each object, that are strings or integers will be listed, each as it’s own div within the div class=”gallery-body
