@@ -183,7 +183,7 @@ It will use a api url where the data can be found.
 
 example 
 
-https://api.instagram.com/v1/users/self/media/recent/?access_token=143984903.92d306a.eab7eb55cbe04325a00ce010af041f4a
+https://api.instagram.com/v1/users/self/media/recent/?access_token=___access-token-is-found by-follow-steps-below___ 
 
 (for the exmaple json data, to get a valid access token, you need an instagram acocunt, and then follow these steps)
 - go to https://api.instagram.com/oauth/authorize/?client_id=92d306a2ca44464098e8ae3c0a128ee6&redirect_uri=http://localhost&response_type=token
