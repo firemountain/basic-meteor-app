@@ -165,6 +165,7 @@ The  HTML would end up looking like this
     </div>
 </div> 
 ```
+Notice how the classes on the newly added divs are named. they are taking the name of the colleciton then appending the name of the property 
 
 https://github.com/firemountain/basic-meteor-app/blob/master/sample-gallery-item.html
  
