@@ -136,18 +136,17 @@
 ```      
 
 
-## BUT we need to do some stuff with the caption.text 
+***## BUT we need to do some stuff with the caption.text***
+we need to make a custom text parser to find different styles of formatting 
 
-### 1st we need to make a custom text parser to find different styles of formatting 
-
-### line spaces 
+### note about line spaces...
 
 we will use " . " to find line spaces 
 so anywhere we find a " . " it is treated as a line space, *note* the leading and trailing spaces are important 
 
-### finding and saving elements
+## finding and saving other elements
 
-#### saving elements
+### saving elements
 - for each type we find we save it to a new array property within "caption"
 - so for e.g.
 - caption.h1 : ["Wood Flow"]
@@ -157,7 +156,7 @@ so anywhere we find a " . " it is treated as a line space, *note* the leading an
 
 
 
-#### finding elements
+### finding elements
 part of the parser will look for elements from github markdown style formatting
 here is github style markdown cheatsheet https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 
@@ -176,7 +175,7 @@ text that has three or more "-" before and after will be saved to caption.h2[]
 caption.text between " . " will be saved as caption.p[], this is also true for the text at the end after the last " . " text at the beginning before the first " . "
 
 
-#### we need to get links 
+### we need to get links 
 - for links we will need to do further parsing, usign regex, and looking for "http://" and "www." to find the links 
     - links found will be saved sequentially in an array to a new property called caption.links :[]  
 
