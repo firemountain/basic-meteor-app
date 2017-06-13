@@ -117,27 +117,30 @@
 
 
 ## fields we want to out put into the html template from example #1 
+```
 - images.standard_resolution.url: "https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/18812563_1535883333122449_2135064342041722880_n.jpg"
 - caption.created_time: "1496553260",
 - created_time: "1496553260"
 - tags: ["selfie"],
 - link: "https://www.instagram.com/p/BU59Dayhq34/",
 - caption.text: "Face made when staring at the phone screen, same face I'm making now ✨🍄✨",
-
+```
 
 ## fields we want to out put into the html template example #2 
+```
 -images.standard_resolution.url: "https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/18950380_112616532676321_3768085580282331136_n.jpg"
 -caption.created_time: "1497311140",
 -tags: ["crazybeautiful"]
 -link: "https://www.instagram.com/p/BVQimIhhYyy/",
 -caption.text: ". # Wood Flow . ## What did I find? . A #crazybeautiful piece of wood **spiraling** in the _woods_ . ## and 1. One 2. Two",
-        
+```      
+
 
 ## BUT we need to do some stuff with the caption.text 
 
 ### 1st we need to make a custom text parser to find different styles of formatting 
 
-    ### line spaces 
+  ### line spaces 
 
     we will use " . " to find line spaces 
     so anywhere we find a " . " it is treated as a line space, *note* the leading and trailing spaces are important 
@@ -155,10 +158,10 @@
 
 
     #### finding elements
-        part of the parser will look for elements from github markdown style formatting
-        here is github style markdown cheatsheet https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+       part of the parser will look for elements from github markdown style formatting
+       here is github style markdown cheatsheet https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 
-        of this style we will support 
+       of this style we will support 
         - all the types of headers here, https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#headers
         - all the types of emphasis here, https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#emphasis
         - ordered lists, e.g. the first 1. 2. here https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#lists
