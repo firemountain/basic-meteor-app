@@ -1,9 +1,10 @@
 ## Config file 
 will feature
 - Admin Username / password
-- A list of featured collections - these will be the collections which will show in navbar and be used with "collection views" (see section below)
-  - Each collection will be given a list “tags” that will show up in <ul class="categories container"> ONLY if they are contained in the tagArray defined for that collection. 
-    - Example of config https://github.com/firemountain/basic-meteor-app/blob/master/collectionsInConfig.json
+- A list of featured collections - these will be the collections which will show in navbar and be used with "collection views"
+- Each collection will be given a list “tags” that will show up in <ul class="categories container"> ONLY if they are contained in the tagArray defined for that collection. 
+
+Example of config https://github.com/firemountain/basic-meteor-app/blob/master/collectionsInConfig.json
 
 
 ## User Login 
