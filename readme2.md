@@ -1,3 +1,39 @@
+## User Login 
+We wil use the meteor useraccounts system 
+
+
+Users will be able to authenticate with instagram
+https://github.com/yubozhao/meteor-accounts-instagram
+
+## Getting Data from Instagram 
+
+we will pull data into a collection called "ig-social-posts"
+
+
+### API endpoint
+
+IF a user authenticates with Instagram we will create an API monitoring process 
+
+the data from the instagram api we want to get is 
+https://www.instagram.com/developer/endpoints/users/#get_users_media_recent_self
+
+you need to get an access_token from Instagram 
+
+go to https://api.instagram.com/oauth/authorize/?client_id=92d306a2ca44464098e8ae3c0a128ee6&redirect_uri=http://localhost&response_type=token
+
+and then enter it in this url 
+https://api.instagram.com/v1/users/self/media/recent/?access_token=
+
+you will get a response like this 
+
+https://github.com/firemountain/basic-meteor-app/blob/master/example.json
+
+### processing 
+
+We want to check this API endpoint every 1 min for new data 
+
+When there is new data we want to create or update the objects in "ig-social-posts"
+
 ## exmaple #1 of an object in our "ig-social-posts" collection 
 
 ```
