@@ -331,5 +331,12 @@ for the other collections that are setup in the cofig the schema will mimic the 
 
 this will give the user a form to create a collection object 
 
+for the gallery-body form add a wysiwyg editor that is stripped down to just 
+- h1,h2,h3,h4,h5
+- bold
+-italic
+- lists 
+
+
 ## Edit Collection Object 
 clicking the heart icon on a gallery-item will give user a form to edit the object 
