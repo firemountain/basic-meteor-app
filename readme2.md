@@ -334,7 +334,7 @@ this will give the user a form to create a collection object
 for the gallery-body form add a wysiwyg editor that is stripped down to just 
 - h1,h2,h3,h4,h5
 - bold
--italic
+- italic
 - lists 
 
 
