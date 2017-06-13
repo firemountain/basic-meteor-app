@@ -43,6 +43,34 @@ We want to check this API endpoint every 1 min for new data
 
 When there is new data we want to create or update the objects in "ig-social-posts"
 
+## views
+
+### Navbar
+   The nav bar features top links for the collections we set in the config file. The first collection in the list is the "default collection"
+ 
+   It also features a drop down menu
+   - For non-logged in users, the dropdown contains Login | Signup | About
+   - For logged in users who are not admins, dropdown contains Logout | About
+   - For logged in users who are admins, dropdown contains Create Scraper 
+ 
+### Collections Views
+  - Hitting the navbar links for each collection causes the data to change on the page and show data relevant to the selected collection 
+
+- #### nav-header ```<div class="nav-header center">```
+  - In the ```<div class="nav-header center">``` The Collection Name is shown , and a button to launch a Create Object modal view (discussed below)
+ 
+- #### categories container ```<ul class="categories container">```
+  - In the  ```<ul class="categories container">``` we will show the tagArray.name values on the collection that have been defined in the config file.
+
+### Gallery Items
+
+these will display data in the collection.object
+
+
+## Collection Objects
+
+the following is a descritpion of how the "ig-social-posts" colleciton objects will display in the UI 
+
 ## exmaple #1 of an object in our "ig-social-posts" collection 
 
 ```
@@ -296,3 +324,12 @@ caption.text between " . " will be saved as caption.p[], this is also true for t
         </div>
 </div>
 ```
+## Other Collections 
+for the other collections that are setup in the cofig the schema will mimic the "ig-social-posts" collection 
+
+## Create Collection Object
+
+this will give the user a form to create a collection object 
+
+## Edit Collection Object 
+clicking the heart icon on a gallery-item will give user a form to edit the object 
