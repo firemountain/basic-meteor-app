@@ -140,51 +140,51 @@
 
 ### 1st we need to make a custom text parser to find different styles of formatting 
 
-  ### line spaces 
+### line spaces 
 
-    we will use " . " to find line spaces 
-    so anywhere we find a " . " it is treated as a line space, *note* the leading and trailing spaces are important 
+we will use " . " to find line spaces 
+so anywhere we find a " . " it is treated as a line space, *note* the leading and trailing spaces are important 
 
-    ### finding and saving elements
+### finding and saving elements
 
-    #### saving elements
-    - for each type we find we save it to a new array property within "caption"
-     - so for e.g.
-      - caption.h1 : ["Wood Flow"]
-      - caption.h2 : ["What did I find?","and"]
-      - caption.emphasis : ["spiraling","woods"]
-      - caption.p ["# Wood Flow","## What did I find?","A #crazybeautiful piece of wood **spiraling** in the _woods_","## and 1. One 2. Two . $0.00"]
-
-
-
-    #### finding elements
-       part of the parser will look for elements from github markdown style formatting
-       here is github style markdown cheatsheet https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
-
-       of this style we will support 
-        - all the types of headers here, https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#headers
-        - all the types of emphasis here, https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#emphasis
-        - ordered lists, e.g. the first 1. 2. here https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#lists
-
-        additionaly:
-        text that has one or two or more "-" before and after will be saved to caption.h1[]
-            - e.g. "--this is an h1--"
-        
-        text that has three or more "-" before and after will be saved to caption.h2[]
-            - e.g. "---this is an h2---"
-
-        caption.text between " . " will be saved as caption.p[], this is also true for the text at the end after the last " . " text at the beginning before the first " . "
+#### saving elements
+- for each type we find we save it to a new array property within "caption"
+- so for e.g.
+- caption.h1 : ["Wood Flow"]
+- caption.h2 : ["What did I find?","and"]
+- caption.emphasis : ["spiraling","woods"]
+- caption.p ["# Wood Flow","## What did I find?","A #crazybeautiful piece of wood **spiraling** in the _woods_","## and 1. One 2. Two . $0.00"]
 
 
-    #### we need to get links 
-        - for links we will need to do further parsing, usign regex, and looking for "http://" and "www." to find the links 
-            - links found will be saved sequentially in an array to a new property called caption.links :[]  
 
-    ### We need to create a new property called "caption.title",
-    - the text value of this new property is either, the 1st "h1[]" OR "h2[]" found via the markdown parsing, 
-        - OR the first few words of the caption.text
-            - the "first few words"  are found by at the the first 27 characters of the caption.text and getting only whole words that fit within that limit.
-                - so for e.g. in the caption text for exmaple-1 above, the first 27 characters are "Face made when staring at t", we would remove the "t" and replace it with "...", and save "Face made when staring at ..." to a new property called "caption.title"
+#### finding elements
+part of the parser will look for elements from github markdown style formatting
+here is github style markdown cheatsheet https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+
+of this style we will support 
+- all the types of headers here, https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#headers
+- all the types of emphasis here, https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#emphasis
+- ordered lists, e.g. the first 1. 2. here https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#lists
+
+additionaly:
+text that has one or two or more "-" before and after will be saved to caption.h1[]
+    - e.g. "--this is an h1--"
+
+text that has three or more "-" before and after will be saved to caption.h2[]
+    - e.g. "---this is an h2---"
+
+caption.text between " . " will be saved as caption.p[], this is also true for the text at the end after the last " . " text at the beginning before the first " . "
+
+
+#### we need to get links 
+- for links we will need to do further parsing, usign regex, and looking for "http://" and "www." to find the links 
+    - links found will be saved sequentially in an array to a new property called caption.links :[]  
+
+### We need to create a new property called "caption.title",
+- the text value of this new property is either, the 1st "h1[]" OR "h2[]" found via the markdown parsing, 
+- OR the first few words of the caption.text
+    - the "first few words"  are found by at the the first 27 characters of the caption.text and getting only whole words that fit within that limit.
+        - so for e.g. in the caption text for exmaple-1 above, the first 27 characters are "Face made when staring at t", we would remove the "t" and replace it with "...", and save "Face made when staring at ..." to a new property called "caption.title"
 
 
 ### here is an example of how the template might look 
