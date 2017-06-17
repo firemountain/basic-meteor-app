@@ -327,7 +327,7 @@ caption.text between " . " will be saved as caption.p[], this is also true for t
 ## Other Collections 
 for the other collections that are setup in the cofig the schema will mimic the "ig-social-posts" collection 
 
-## Create Collection Object
+## Create Object in Collection
 
 this will give the user a form to create a collection object 
 
