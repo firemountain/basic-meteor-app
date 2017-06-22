@@ -1,0 +1,30 @@
+<template name="homepage">
+    <div class="section gray">
+        <div class="container">
+            <div class="gallery row">
+                {{#each mediaItems}}
+                    <div class="col l4 m6 s12 gallery-item gallery-expand gallery-filter tag1">
+                        <div class="placeholder">
+                            <div class="gallery-curve-wrapper">
+                                <a class="gallery-cover gray">
+                                    <img class="responsive-img" src="{{standard_resolution.url}}" alt="placeholder">
+                                </a>
+                                <div class="gallery-header">
+                                    <span>{{caption}}   </span>
+                                </div>
+                                <div class="gallery-body" style="margin-top: 211px; padding: 40px; min-height: 601px; display: none;">
+                                    <div class="title-wrapper" style="">
+                                        <h3>{{caption}}</h3>
+                                    </div>
+                                </div>
+                                <div class="gallery-action" style="top: 211px;">
+                                    <a class="btn-floating btn-large waves-effect waves-light"><i class="material-icons">favorite</i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</template>

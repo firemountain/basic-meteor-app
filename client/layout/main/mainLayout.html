@@ -1,0 +1,38 @@
+<template name="mainLayout">
+    <!-- Navbar and Header -->
+    <nav class="nav-extended">
+        <div class="nav-background">
+            <div class="pattern active" style="background-image: url('http://placehold.it/1400x300');"></div>
+        </div>
+        <div class="nav-wrapper container">
+            <a href="index.html" class="brand-logo"><i class="material-icons">dashboard</i>Name of Project</a>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="index.html">default-collection</a></li>
+                <li class="active"><a href="collection1.html">Collection 1</a></li>
+                <li><a href="collection2.html">Collection 2</a></li>
+                <li><a class='dropdown-button' href='#' data-activates='manage-dropdown' data-belowOrigin="true" data-constrainWidth="false">Manage<i class="material-icons right">arrow_drop_down</i></a></li>
+                <li>
+                    {{> loginButtons}}
+                </li>
+            </ul>
+            <!-- Dropdown Structure -->
+            <ul id='manage-dropdown' class='dropdown-content'>
+                <!-- <li><a href="create-collection.html">Create Collection</a></li> -->
+                <li><a href="create-scraper.html">Create API Scraper</a></li>
+                <li><a href="user-permissions.html">User Permissions</a></li>
+            </ul>
+
+        </div>
+    </nav>
+    <ul class="side-nav" id="nav-mobile">
+        <li><a href="index.html"><i class="material-icons">dashboard</i>Feed</a></li>
+        <li class="active"><a href="collection1.html"><i class="material-icons">brightness_3</i>Collection 1</a></li>
+        <li><a href="collection2.html"><i class="material-icons">edit</i>collection2</a></li>
+        <li><a href="collection3.html"><i class="material-icons">school</i>collection3</a></li>
+        <li><a href="create-scraper.html"><i class="material-icons">fullscreen</i>Create Scraper</a></li>
+        <!-- <li><a href="create-collection.html"><i class="material-icons">swap_horiz</i>Create Colleciton</a></li> -->
+        <li><a href="user-permissions.html"><i class="material-icons">texture</i>User Permissions</a></li>
+    </ul>
+    {{> Template.dynamic template=main}}
+</template>

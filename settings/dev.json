@@ -1,0 +1,8 @@
+{
+  "loginProviders" : {
+    "INSTAGRAM" : {
+      "CLIENT_ID" : "25f3b9ed897c428b8b135a4230342313",
+      "SECRET" : "eee7e548206c46669dec3c32a28da103"
+    }
+  }
+}

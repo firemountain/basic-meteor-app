@@ -1,0 +1,19 @@
+{
+  "name": "instablog",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.20.0",
+    "desandro-matches-selector": "^2.0.2",
+    "ev-emitter": "^1.1.0",
+    "fizzy-ui-utils": "^2.0.5",
+    "get-size": "^2.0.2",
+    "hammerjs": "^2.0.8",
+    "instagram-api": "^1.0.3",
+    "jquery": "^3.2.1",
+    "meteor-node-stubs": "~0.2.4",
+    "outlayer": "^2.1.1"
+  }
+}
