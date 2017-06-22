@@ -245,7 +245,7 @@ text that has one or two or more "-" before and after will be saved to caption.h
 text that has three or more "-" before and after will be saved to caption.h2[]
     - e.g. "---this is an h2---"
 
-text that is sandwiched between 1 or more of any of these emojis should be h1 🔶 🔷 🔳 🔲  ◾️ ◽️ ◼️ ◻️ ⬛️ ⬜️
+text that is sandwiched between 1 or more of any of these emojis should be h1 
     - e.g. "🔶this is an h1🔶"  ...  "🔶🔶this is an h1🔶🔶" ... "◾️◾️This is an h1◾️◾️"
            
       2341	U+2B1B	⬛	⬛	⬛	⬛	⬛	⬛	⬛	⬛	⬛	—	—	—	⬛	black large square
@@ -255,7 +255,9 @@ text that is sandwiched between 1 or more of any of these emojis should be h1 �
       2337	U+25FB	◻	◻	◻	◻	◻	◻	◻	◻	◻	◻	—	—	◻	white medium square
       2338	U+25FC	◼	◼	◼	◼	◼	◼	◼	◼	◼	◼	—	—	◼	black medium square
             
-text that is sandwiched between 1 or more of any of these emojis should be h2 ▪️ ▫️ 🔸 🔹
+
+
+text that is sandwiched between 1 or more of any of these emojis should be h2 
 
       2335  U+25AA	▪	▪	▪	▪	▪	▪	▪	▪	▪	▪	—	—	▪	black small square
       2336	U+25AB	▫	▫	▫	▫	▫	▫	▫	▫	▫	▫	—	—	▫	white small square
