@@ -245,6 +245,27 @@ text that has one or two or more "-" before and after will be saved to caption.h
 text that has three or more "-" before and after will be saved to caption.h2[]
     - e.g. "---this is an h2---"
 
+text that is sandwiched between 1 or more of any of these emojis should be h1 🔶 🔷 🔳 🔲  ◾️ ◽️ ◼️ ◻️ ⬛️ ⬜️
+    - e.g. "🔶this is an h1🔶"  ...  "🔶🔶this is an h1🔶🔶" ... "◾️◾️This is an h1◾️◾️"
+           
+      2341	U+2B1B	⬛	⬛	⬛	⬛	⬛	⬛	⬛	⬛	⬛	—	—	—	⬛	black large square
+      2342	U+2B1C	⬜	⬜	⬜	⬜	⬜	⬜	⬜	⬜	⬜	—	—	—	⬜	white large square
+      2343	U+1F536	🔶	🔶	🔶	🔶	🔶	🔶	🔶	🔶	🔶	🔶	—	—	🔶	large orange diamond
+      2344	U+1F537	🔷	🔷	🔷	🔷	🔷	🔷	🔷	🔷	🔷	🔷	—	—	🔷	large blue diamond
+      2337	U+25FB	◻	◻	◻	◻	◻	◻	◻	◻	◻	◻	—	—	◻	white medium square
+      2338	U+25FC	◼	◼	◼	◼	◼	◼	◼	◼	◼	◼	—	—	◼	black medium square
+            
+text that is sandwiched between 1 or more of any of these emojis should be h2 ▪️ ▫️ 🔸 🔹
+
+      2335  U+25AA	▪	▪	▪	▪	▪	▪	▪	▪	▪	▪	—	—	▪	black small square
+      2336	U+25AB	▫	▫	▫	▫	▫	▫	▫	▫	▫	▫	—	—	▫	white small square
+      2339	U+25FD	◽	◽	◽	◽	◽	◽	◽	◽	◽	◽	—	—	◽	white medium-small square
+      2340	U+25FE	◾	◾	◾	◾	◾	◾	◾	◾	◾	◾	—	—	◾	black medium-small square
+      2345	U+1F538	🔸	🔸	🔸	🔸	🔸	🔸	🔸	🔸	🔸	🔸	—	—	🔸	small orange diamond
+      2346	U+1F539	🔹	🔹	🔹	🔹	🔹	🔹	🔹	🔹	🔹	🔹	—	—	🔹	small blue diamond
+         
+
+
 caption.text between " . " will be saved as caption.p[], this is also true for the text at the end after the last " . " text at the beginning before the first " . "
 
 
