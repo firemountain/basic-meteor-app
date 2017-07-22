@@ -1,3 +1,5 @@
+
+
 const InstagramAPI = require('instagram-api');
 
 import { UserMedia } from '../imports/api/user-media/user-media';
@@ -7,7 +9,7 @@ Meteor.users.helpers({
         const endpoint = new InstagramAPI( this.services.instagram.accessToken );
         const user = this;
 
-        endpoint.userSelfMedia()
+        endpoint.userSelfMedia({ count: 100 })
             .then(Meteor.bindEnvironment(function( response ){
                 response.data.forEach((item)=>{
                     const insertObj = {

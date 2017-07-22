@@ -18,7 +18,7 @@ Template.homepage.onRendered(function(){
         let msnry = new Masonry( grid, {
             itemSelector: '.gallery-item'
         });
-    }, 500);
+    }, 800);
 
     Meteor.setTimeout(()=>{
         let onShow = function(el) {
@@ -32,7 +32,7 @@ Template.homepage.onRendered(function(){
         $('.gallery-expand').galleryExpand({
             onShow: onShow
         });
-    }, 500);
+    }, 1500);
 });
 
 Template.homepage.helpers({

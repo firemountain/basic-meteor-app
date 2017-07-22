@@ -8,7 +8,7 @@ Meteor.startup(()=>{
 
     ServiceConfiguration.configurations.insert({
         service:'instagram',
-        scope : ['basic' , 'public_content' , 'likes'],
+        scope : ['basic'],
         clientId : Meteor.settings.loginProviders.INSTAGRAM.CLIENT_ID,
         secret : Meteor.settings.loginProviders.INSTAGRAM.SECRET
     });
