@@ -209,7 +209,7 @@ the following is a descritpion of how the "ig-social-posts" colleciton objects w
 ```      
 
 
-** ## BUT we need to do some stuff with the caption.text **
+## Parsing the "caption.text"
 we need to make a custom text parser to find different styles of formatting 
 
 ### note about line spaces...
@@ -217,19 +217,18 @@ we need to make a custom text parser to find different styles of formatting
 we will use " . " to find line spaces 
 so anywhere we find a " . " it is treated as a line space, *note* the leading and trailing spaces are important 
 
-## finding and saving other elements
+## finding and saving other elements of the caption.text
 
-### saving elements
-- for each type we find we save it to a new array property within "caption"
+When parsing the caption.text we want to pull out different elements that will be saved to the data object as their own field. We will use these and the "line spaces" for displaying the html on the template. For each type of element we find we save it to a new array property within "caption"
 - so for e.g.
-- caption.h1 : ["Wood Flow"]
-- caption.h2 : ["What did I find?","and"]
-- caption.emphasis : ["spiraling","woods"]
-- caption.p ["# Wood Flow","## What did I find?","A #crazybeautiful piece of wood **spiraling** in the _woods_","## and 1. One 2. Two . $0.00"]
+  - caption.h1 : ["Wood Flow"]
+  - caption.h2 : ["What did I find?","and"]
+  - caption.emphasis : ["spiraling","woods"]
+  - caption.p ["# Wood Flow","## What did I find?","A #crazybeautiful piece of wood **spiraling** in the _woods_","## and 1. One 2. Two . $0.00"]
 
 
 
-### finding elements
+### the way in which we find elements
 part of the parser will look for elements from github markdown style formatting
 here is github style markdown cheatsheet https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 
@@ -269,6 +268,11 @@ text that is sandwiched between 1 or more of any of these emojis should be h2
 
 
 caption.text between " . " will be saved as caption.p[], this is also true for the text at the end after the last " . " text at the beginning before the first " . "
+
+so for example:
+"the brown fox is the man. He jumps and jumps . He runs fast and goes . He never stops."
+
+the array would be like [ "the brown fox is the man. He jumps and jumps", "He runs fast and goes", "He never stops."]
 
 
 ### we need to get links 
