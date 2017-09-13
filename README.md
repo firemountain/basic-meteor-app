@@ -209,7 +209,7 @@ the following is a descritpion of how the "ig-social-posts" colleciton objects w
 ```      
 
 
-***## BUT we need to do some stuff with the caption.text***
+** ## BUT we need to do some stuff with the caption.text **
 we need to make a custom text parser to find different styles of formatting 
 
 ### note about line spaces...
