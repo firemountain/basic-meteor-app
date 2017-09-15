@@ -189,7 +189,8 @@ the following is a descritpion of how the "ig-social-posts" colleciton objects w
 ```
 
 
-## fields we want to out put into the html template from example #1 
+## fields we want to use in our html template from example #1 
+* note, here i am showing just which data is relevant to the UI. 
 ```
 - images.standard_resolution.url: "https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/18812563_1535883333122449_2135064342041722880_n.jpg"
 - caption.created_time: "1496553260",
@@ -199,7 +200,7 @@ the following is a descritpion of how the "ig-social-posts" colleciton objects w
 - caption.text: "Face made when staring at the phone screen, same face I'm making now ✨🍄✨",
 ```
 
-## fields we want to out put into the html template example #2 
+## fields we want to use in our example #2 
 ```
 -images.standard_resolution.url: "https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/18950380_112616532676321_3768085580282331136_n.jpg"
 -caption.created_time: "1497311140",
@@ -210,80 +211,27 @@ the following is a descritpion of how the "ig-social-posts" colleciton objects w
 
 
 ## Parsing the "caption.text"
-we need to make a custom text parser to find different styles of formatting 
+we need to make a custom text parser, that will looks at the caption.text to find different styles of formatting and save those to our db, so we can then output them to the UI in styled way. Bascially the input is the caption.text and the output is html elements. 
 
-### note about line spaces...
+### Using the spaces and periods to determine "< p >" elements
+We want to be able to be able to break the caption.text into paragraphs, and we want the user to be able to do this by using a simple mostly hidden format. this hidden format will be that user will use 2 spaces after a "." so, the parser will be looking for ".  " for e.g. 
 
-we will use " . " to find line spaces 
-so anywhere we find a " . " it is treated as a line space, *note* the leading and trailing spaces are important 
+"this is an example of 2 sentences. The second sentence is NOT a new paragrap." 
+"this is an example of 2 sentences.  The second sentence IS a new paragraph."
 
-## finding and saving other elements of the caption.text
+notice how on the 2nd example, there are 2 speaces after "sentences.  " we want to teach instagram users that they can use this type of notation to create a new paragraph, or line break. 
 
-When parsing the caption.text we want to pull out different elements that will be saved to the data object as their own field. We will use these and the "line spaces" for displaying the html on the template. For each type of element we find we save it to a new array property within "caption"
-- so for e.g.
-  - caption.h1 : ["Wood Flow"]
-  - caption.h2 : ["What did I find?","and"]
-  - caption.emphasis : ["spiraling","woods"]
-  - caption.p ["# Wood Flow","## What did I find?","A #crazybeautiful piece of wood **spiraling** in the _woods_","## and 1. One 2. Two . $0.00"]
-
-
-
-### the way in which we find elements
-part of the parser will look for elements from github markdown style formatting
-here is github style markdown cheatsheet https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
-
-of this style we will support 
-- all the types of headers here, https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#headers
-- all the types of emphasis here, https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#emphasis
-- ordered lists, e.g. the first 1. 2. here https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#lists
-
-additionaly:
-text that has one or two or more "-" before and after will be saved to caption.h1[]
-    - e.g. "--this is an h1--"
-
-text that has three or more "-" before and after will be saved to caption.h2[]
-    - e.g. "---this is an h2---"
-
-text that is sandwiched between 1 or more of any of these emojis should be h1 
-    - e.g. "🔶this is an h1🔶"  ...  "🔶🔶this is an h1🔶🔶" ... "◾️◾️This is an h1◾️◾️"
-           
-      2341	U+2B1B	⬛	⬛	⬛	⬛	⬛	⬛	⬛	⬛	⬛	—	—	—	⬛	black large square
-      2342	U+2B1C	⬜	⬜	⬜	⬜	⬜	⬜	⬜	⬜	⬜	—	—	—	⬜	white large square
-      2343	U+1F536	🔶	🔶	🔶	🔶	🔶	🔶	🔶	🔶	🔶	🔶	—	—	🔶	large orange diamond
-      2344	U+1F537	🔷	🔷	🔷	🔷	🔷	🔷	🔷	🔷	🔷	🔷	—	—	🔷	large blue diamond
-      2337	U+25FB	◻	◻	◻	◻	◻	◻	◻	◻	◻	◻	—	—	◻	white medium square
-      2338	U+25FC	◼	◼	◼	◼	◼	◼	◼	◼	◼	◼	—	—	◼	black medium square
-            
-
-
-text that is sandwiched between 1 or more of any of these emojis should be h2 
-
-      2335  U+25AA	▪	▪	▪	▪	▪	▪	▪	▪	▪	▪	—	—	▪	black small square
-      2336	U+25AB	▫	▫	▫	▫	▫	▫	▫	▫	▫	▫	—	—	▫	white small square
-      2339	U+25FD	◽	◽	◽	◽	◽	◽	◽	◽	◽	◽	—	—	◽	white medium-small square
-      2340	U+25FE	◾	◾	◾	◾	◾	◾	◾	◾	◾	◾	—	—	◾	black medium-small square
-      2345	U+1F538	🔸	🔸	🔸	🔸	🔸	🔸	🔸	🔸	🔸	🔸	—	—	🔸	small orange diamond
-      2346	U+1F539	🔹	🔹	🔹	🔹	🔹	🔹	🔹	🔹	🔹	🔹	—	—	🔹	small blue diamond
-         
-
-
-caption.text between " . " will be saved as caption.p[], this is also true for the text at the end after the last " . " text at the beginning before the first " . "
-
-so for example:
-"the brown fox is the man. He jumps and jumps . He runs fast and goes . He never stops."
-
-the array would be like [ "the brown fox is the man. He jumps and jumps", "He runs fast and goes", "He never stops."]
+### Title
+Each Caption.text should have 1 title. 
+- it shoudl be the first few words of the caption.text
+    - the "first few words"  are found by at the the first 27 characters of the caption.text and getting only whole words that fit within that limit.
+        - so for e.g. in the caption text for exmaple-1 above, the first 27 characters are "Face made when staring at t", we would remove the "t" and replace it with "...", and save "Face made when staring at ..." to a new property called "caption.title"
+        
 
 
 ### we need to get links 
-- for links we will need to do further parsing, usign regex, and looking for "http://" and "www." to find the links 
+- for links within the caption.text we will need to do further parsing, usign regex, and looking for "http://" and "www." to find the links 
     - links found will be saved sequentially in an array to a new property called caption.links :[]  
-
-### We need to create a new property called "caption.title",
-- the text value of this new property is either, the 1st "h1[]" OR "h2[]" found via the markdown parsing, 
-- OR the first few words of the caption.text
-    - the "first few words"  are found by at the the first 27 characters of the caption.text and getting only whole words that fit within that limit.
-        - so for e.g. in the caption text for exmaple-1 above, the first 27 characters are "Face made when staring at t", we would remove the "t" and replace it with "...", and save "Face made when staring at ..." to a new property called "caption.title"
 
 
 ### here is an example of how the template might look 
@@ -304,12 +252,12 @@ the array would be like [ "the brown fox is the man. He jumps and jumps", "He ru
                   <span class="price">{{colleciton.caption.created_time}}</span>  // this needs to be in date format 
                 </div>
                 
-                /// below is a bit tricker becasue we need to break up the collection.caption.p[] into different divs and place the h1's, h2's, links, etc, correctly 
+                /// below is a bit tricker becasue we need to break up the collection.caption.p[] into different divs and place the links, correctly 
 
-                <p><h1>{{collection.caption.h1[0]}}</h1></p>
-                <p><h2>{{collection.caption.h2[0]}}</h2></p>
-                <p>{{collection.caption.p[2]}}</p>
-                <p><h2>{{collection.caption.h2[1]}}</h2><p>{{collection.caption.p[3]}}</p></p>
+                <p>some text some text some text <a href src="http://www.link.com">www.link.com</a></p>
+                <p>some text some text some text</p>
+                <p>some text some <a href src="http://www.link.com">link.com</a> text some text </p>
+                <p>some text some text some text</p>
             </div>
               
             <div class="gallery-action">
