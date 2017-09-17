@@ -4,7 +4,7 @@ This project was being developed but got dropped by the preivous developer, and 
 
 #### Currently (sept 16th 2017) the code can be found in the "staging" branch.
 
-### Launching Locally
+### Launching locally
 Launching the code locally requires:
 
  - npm install 
@@ -12,12 +12,12 @@ Launching the code locally requires:
  - npm start 
 
 
-### Deployed Site 
+### Deployed site 
 The site is already live here 
 
 http://45.55.232.17
 
-### Exploring Functionality of What We Have Sofar. 
+### Exploring the functionality of what we have so far. 
 - click the "Sign in With Instagram" button to populate the view with posts.
 
 - when you see the posts, it will look like this
@@ -30,7 +30,7 @@ http://45.55.232.17
 
 Currently what you have done so far is extent of the site functionality.
 
-### Source Code of UI 
+### Source code of UI 
 The UI we are using is coming from here. 
 https://themes.materializecss.com/pages/demo
 
