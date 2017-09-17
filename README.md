@@ -1,6 +1,11 @@
-#### Hello new developer ! 
+### Hello new developer ! 
 
-This project was being developed but got dropped by the preivous developer, and needs someone new to come in and complete the job.
+#### This project was being developed, but got dropped by the preivous developer, and needs someone new to come in and complete the job. 
+
+- I am posting it on Upwork to find the new developer. 
+
+- check the "projects" section to see the work to be done 
+https://gyazo.com/85145e749a3fc47d68cc97da5d50bf09
 
 ### The Original Job
 The original job, described simply, is that:
