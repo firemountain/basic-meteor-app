@@ -2,6 +2,27 @@
 
 This project was being developed but got dropped by the preivous developer, and needs someone new to come in and complete the job.
 
+### The Original Job
+The original job, described simply, is that:
+- 1 ) we wanted to take this theme template and implement it as a Meteor app UI.
+
+- 2 ) we wanted allow for user's to login to create accounts and Authenticate with Instagram 
+
+- 3 ) we wanted to pull the user's instagram "posts" from the IG(instagram) API and populate the "cards"  on the UI template, and keep the "posts" data in our DB up to date with any new data being added to the user's Instagram account.  
+
+- 4 ) we wanted to allow the user to filter the cards using the filtering feature on the UI template 
+
+- 5 ) we wanted to allow the user to create multiple "Collections" of cards, with one of those collections being posts pulled from IG, and the other ones would be collections that user manually creates posts for within our app. 
+
+- 6) we wanted the user to be able to edit the data of any of the posts in any collection.
+
+Here you can see a live demo of the template: https://themes.materializecss.com/pages/demo
+
+Here you can see a live demo of the Meteor app that the previous developer created: http://45.55.232.17
+
+As you can see much of the functionality and desired outcome is yet to be built. 
+
+
 #### Currently (sept 16th 2017) the code can be found in the "staging" branch.
 
 ### Launching locally
